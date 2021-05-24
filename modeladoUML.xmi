@@ -35,6 +35,7 @@
         <UML:DataType visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uljbbGmm2w6I2" name="Long"/>
         <UML:DataType visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uTi4QX9isLZro" name="StringBuffer"/>
         <UML:DataType visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uSG0PTuo8PAKz" name="StringBuilder"/>
+        <UML:DataType visibility="public" isSpecification="false" namespace="Datatypes" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="ubP65c3qeVu0A" name="undef"/>
        </UML:Namespace.ownedElement>
       </UML:Package>
       <UML:Class visibility="public" isSpecification="false" namespace="Logical_View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uDXVvftSrOjLA" comment="Objeto que se encarga de tener la baraja y crear el juego " name="Tablero">
@@ -255,6 +256,7 @@
       <listitem open="0" type="829" id="uwGdtYFcBUE11"/>
       <listitem open="0" type="829" id="uTi4QX9isLZro"/>
       <listitem open="0" type="829" id="uSG0PTuo8PAKz"/>
+      <listitem open="0" type="829" id="ubP65c3qeVu0A"/>
      </listitem>
      <listitem open="0" type="807" id="uZUeonmbiOZra" label="diagrama de clases"/>
      <listitem open="1" type="818" id="uPLFu3fR4f5uY">
