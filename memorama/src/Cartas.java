@@ -56,6 +56,73 @@ public class Cartas extends JButton implements ActionListener {
    
         }       
         
-    }          
-  
+    }  
+    
+    
+    public void destapar() {
+        setIcon(icono);        
+        destapado = true;
+    }
+    
+    public void tapar(){        
+        setIcon(iconoTapado);
+        destapado = false;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public boolean isEncontrado() {
+        return encontrado;
+    }
+
+    public void setEncontrado(boolean encontrado) {
+        this.encontrado = encontrado;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
+    public void setImagenTapada(String imagenTapada) {
+        this.imagenTapada = imagenTapada;
+    }
+
+    public void setIcono(ImageIcon icono) {
+        this.icono = icono;
+    }
+
+    public void setIconoTapado(ImageIcon iconoTapado) {
+        this.iconoTapado = iconoTapado;
+    }
+
+    public String getImagenTapada() {
+        return imagenTapada;
+    }
+
+    public ImageIcon getIcono() {
+        return icono;
+    }
+
+    public ImageIcon getIconoTapado() {
+        return iconoTapado;
+    }
+
+    public boolean isDestapado() {
+        return destapado;
+    }
+
+    public void setDestapado(boolean destapado) {
+        this.destapado = destapado;
+    }
+                
 }
