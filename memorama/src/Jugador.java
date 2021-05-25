@@ -7,11 +7,12 @@
         this.puntaje = 0;
         this.turno = turno;
     }
-    
+
+    //Suma puntos al jugador que tiene turno al encontrar las cartas correctas
     public  void sumaPunto() {
         puntaje++;
     }
-
+    //regresa el puntaje del jugador que tiene el turno
     public  int getPuntaje() {
         return puntaje;
     }
@@ -19,7 +20,7 @@
     public  void setPuntaje(int puntaje) {
         this.puntaje = puntaje;
     }  
-
+    //Le da el turno al jugador que le toca mover cartas
     public  boolean isTurno() {
         return turno;
     }
