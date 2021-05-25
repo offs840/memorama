@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI verified="false" xmi.version="1.2" timestamp="2021-05-24T23:05:23" xmlns:UML="http://schema.omg.org/spec/UML/1.4">
+
+<XMI verified="false" xmi.version="1.2" timestamp="2021-05-24T23:07:11" xmlns:UML="http://schema.omg.org/spec/UML/1.4">
+
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller http://umbrello.kde.org</XMI.exporter>
@@ -41,21 +43,21 @@
       </UML:Package>
       <UML:Class visibility="public" isSpecification="false" namespace="Logical_View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uDXVvftSrOjLA" comment="Objeto que se encarga de tener la baraja y crear el juego " name="Tablero">
        <UML:Classifier.feature>
-        <UML:Attribute visibility="private" isSpecification="false" xmi.id="ur1fMijazZo1f" type="uZbyKpHZJKham" name="filas"/>
-        <UML:Attribute visibility="private" isSpecification="false" xmi.id="uU16Su8N7QdUt" type="uZbyKpHZJKham" name="columnas"/>
-        <UML:Attribute visibility="private" isSpecification="false" xmi.id="uJ7lHW7jeS5KM" type="uZbyKpHZJKham" name="totalCartas"/>
+        <UML:Attribute visibility="private" isSpecification="false" xmi.id="ur1fMijazZo1f" type="uZbyKpHZJKham" comment="Celdas dispuestas horizontalmente para proporcionar uniformidad" name="filas"/>
+        <UML:Attribute visibility="private" isSpecification="false" xmi.id="uU16Su8N7QdUt" type="uZbyKpHZJKham" comment="Son un grupo de celdas alineadas verticalmente y van de arriba a abajo." name="columnas"/>
+        <UML:Attribute visibility="private" isSpecification="false" xmi.id="uJ7lHW7jeS5KM" type="uZbyKpHZJKham" comment="Conjunto de cartas las cuales conforman la baraja para el memorama." name="totalCartas"/>
         <UML:Attribute visibility="private" isSpecification="false" ownerScope="classifier" xmi.id="uHZOKQqN0kcNf" type="uM2RjSrkSUb9r" name="Baraja"/>
         <UML:Attribute visibility="private" isSpecification="false" ownerScope="classifier" xmi.id="ueCYRA4IS4PfT" type="ubP65c3qeVu0A" name="cartaVolteada1"/>
         <UML:Attribute visibility="private" isSpecification="false" ownerScope="classifier" xmi.id="urm1d6d1V1dI3" type="ubP65c3qeVu0A" name="cartaVolteada2"/>
         <UML:Attribute visibility="private" isSpecification="false" ownerScope="classifier" xmi.id="u87rgEeiiESFE" type="uZbyKpHZJKham" name="puntajeTotal"/>
-        <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uyQHdhZJ4qz0V" isOverride="false" name="crearJugadores" isInline="false" isVirtual="false"/>
-        <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="ukIvdjKpEIAPM" isOverride="false" name="crearTablero" isInline="false" isVirtual="false"/>
-        <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uTdP93XP46NBd" isOverride="false" name="verificarCartas" isInline="false" isVirtual="false">
+        <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uyQHdhZJ4qz0V" comment="Inicializa el juego, creando a los jugadores." isOverride="false" name="crearJugadores" isInline="false" isVirtual="false"/>
+        <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="ukIvdjKpEIAPM" comment="Se encarga de la creacion del tablero el cual esta conformado por filas y columnas en las cuales se ubicaran las imagenes" isOverride="false" name="crearTablero" isInline="false" isVirtual="false"/>
+        <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uTdP93XP46NBd" comment="Metodo el cual verifica que las cartas volteadas por cada jugador son similares, de esta manera genera un punto de lo contrario pasa o cede el turno" isOverride="false" name="verificarCartas" isInline="false" isVirtual="false">
          <UML:BehavioralFeature.parameter>
           <UML:Parameter kind="return" xmi.id="uJSOEp2LT2ik2" type="uGnQGWfx0fd5q"/>
          </UML:BehavioralFeature.parameter>
         </UML:Operation>
-        <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="umn880Gulx32q" isOverride="false" name="cambiarTurno" isInline="false" isVirtual="false"/>
+        <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="umn880Gulx32q" comment="Permite ceder o cambiar el turno, permitiendo a cada jugador interactuar cuando es preciso." isOverride="false" name="cambiarTurno" isInline="false" isVirtual="false"/>
         <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="u2CLpMto89X4B" isOverride="false" name="calcularGrid" isInline="false" isVirtual="false"/>
         <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" ownerScope="classifier" isRoot="false" xmi.id="uUDnFwvWRmf8U" isOverride="false" name="main" isInline="false" isVirtual="false">
          <UML:BehavioralFeature.parameter>
@@ -75,7 +77,7 @@
           <UML:Parameter kind="return" xmi.id="uUIFx9L4sMd9y" type="uGnQGWfx0fd5q"/>
          </UML:BehavioralFeature.parameter>
         </UML:Operation>
-        <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uHcF94u1Xdans" isOverride="false" name="finalizarJuego()" isInline="false" isVirtual="false"/>
+        <UML:Operation visibility="public" isSpecification="false" isQuery="false" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uHcF94u1Xdans" isOverride="false" name="finalizarJuego" isInline="false" isVirtual="false"/>
        </UML:Classifier.feature>
        <UML:Namespace.ownedElement>
         <UML:Class visibility="public" isSpecification="false" namespace="uDXVvftSrOjLA" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="u6vBV5UoBZ788" name="new_class"/>
@@ -112,7 +114,8 @@
       <UML:Dependency visibility="public" isSpecification="false" namespace="Logical_View" supplier="uA2uvDGpdlCCQ" xmi.id="umVzjVFfTqfjR" client="uDXVvftSrOjLA" name=""/>
       <UML:Dependency visibility="public" isSpecification="false" namespace="Logical_View" supplier="uMaz0uvF0hnXw" xmi.id="usefUAtvCY81o" client="uDXVvftSrOjLA" name=""/>
       <UML:Dependency visibility="public" isSpecification="false" namespace="Logical_View" supplier="usvGFZRD5E2Wr" xmi.id="uZjExBDUGAI52" client="uDXVvftSrOjLA" name=""/>
-      <UML:Class visibility="public" isSpecification="false" namespace="Logical_View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uM2RjSrkSUb9r" name="Baraja">
+
+      <UML:Class visibility="public" isSpecification="false" namespace="Logical_View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="uM2RjSrkSUb9r" comment="Objeto Baraja: Este objeto representa cada carta que sera dispuesta en el tablero" name="Baraja">
        <UML:Classifier.feature>
         <UML:Attribute visibility="private" isSpecification="false" xmi.id="uw7WB0g5lf0Du" type="uCu2c772UWu3O" name="imagenes"/>
         <UML:Attribute visibility="private" isSpecification="false" xmi.id="uxkIG9HtlPWNJ" type="uv260seYK7hhu" name="cartas"/>
@@ -180,7 +183,8 @@
          <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="1" showpackage="1" x="-419" showattsigs="601" showstereotype="1" y="-521" showattributes="1" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="uL4ZD8iq63K6t" width="124" isinstance="0" usefillcolor="1" fillcolor="#c0ffff" xmi.id="uMaz0uvF0hnXw" autoresize="1" showscope="1" height="29" showopsigs="601"/>
          <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="1" showpackage="1" x="-241" showattsigs="601" showstereotype="1" y="-521" showattributes="1" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="ups88NaaxGJ6y" width="121" isinstance="0" usefillcolor="1" fillcolor="#c0ffff" xmi.id="usvGFZRD5E2Wr" autoresize="1" showscope="1" height="29" showopsigs="601"/>
          <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="1" showpackage="1" x="42.6518" showattsigs="601" showstereotype="1" y="-396.296" showattributes="1" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="uAtAGwSQ9KRxP" width="137" isinstance="0" usefillcolor="1" fillcolor="#ffffc0" xmi.id="uM2RjSrkSUb9r" autoresize="1" showscope="1" height="97" showopsigs="601"/>
-         <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="1" showpackage="1" x="-902.348" showattsigs="601" showstereotype="1" y="-396.296" showattributes="1" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="u1C1POI7reTdh" width="173" isinstance="0" usefillcolor="1" fillcolor="#ffffc0" xmi.id="umWb5YIjlzrFW" autoresize="1" showscope="1" height="142" showopsigs="601"/>
+
+         <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="1" showpackage="1" x="-902.348" showattsigs="601" showstereotype="1" y="-397.501" showattributes="1" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="u1C1POI7reTdh" width="173" isinstance="0" usefillcolor="1" fillcolor="#ffffc0" xmi.id="umWb5YIjlzrFW" autoresize="1" showscope="1" height="142" showopsigs="601"/>
          <packagewidget width="70" showstereotype="1" x="-179.5" usesdiagramusefillcolor="0" y="-609.25" usesdiagramfillcolor="0" isinstance="0" localid="uCfEOG5yS106N" fillcolor="#c0ffff" height="40" linecolor="#ff0000" xmi.id="uOHHK9SdUUpIH" autoresize="1" textcolor="#000000" usefillcolor="1" linewidth="0" font="Sans Serif,9,-1,0,50,0,0,0,0,0"/>
          <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="1" showpackage="1" x="206" showattsigs="601" showstereotype="1" y="-521" showattributes="1" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="uEJEcSEBF6Bil" width="119" isinstance="0" usefillcolor="1" fillcolor="#c0ffff" xmi.id="ujioz82TMDxQk" autoresize="1" showscope="1" height="29" showopsigs="601"/>
          <classwidget linecolor="#ff0000" usesdiagramfillcolor="0" linewidth="0" textcolor="#000000" showoperations="1" usesdiagramusefillcolor="0" showpubliconly="1" showpackage="1" x="-66" showattsigs="601" showstereotype="1" y="-521" showattributes="1" font="Sans Serif,9,-1,0,50,0,0,0,0,0" localid="ucuHtMYhwSQQR" width="78" isinstance="0" usefillcolor="1" fillcolor="#c0ffff" xmi.id="uFgCVEvMc2D6l" autoresize="1" showscope="1" height="29" showopsigs="601"/>
@@ -330,7 +334,8 @@
   </UML:Model>
  </XMI.content>
  <XMI.extensions xmi.extender="umbrello">
-  <docsettings viewid="uZUeonmbiOZra" uniqueid="uRyBNsmKn8prl" documentation=""/>
+
+  <docsettings viewid="uZUeonmbiOZra" uniqueid="uRc9lQ5Uhd9rH" documentation=""/>
   <listview>
    <listitem open="1" type="800" id="Views">
     <listitem open="1" type="821" id="Component_View"/>
