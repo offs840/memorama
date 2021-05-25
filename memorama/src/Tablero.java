@@ -1,10 +1,20 @@
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridBagLayout;
 import javax.swing.JFrame;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 import java.awt.GridLayout;
 import java.awt.Image;
+import java.awt.TextArea;
+import java.awt.TextField;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.border.EmptyBorder;
 
 /**
  *
@@ -24,8 +34,8 @@ public class Tablero {
         puntajeTotal = 0;
     }
     public static void main (String[] args) {                        
-        Tablero t = new Tablero();
-        t.crearTablero();                
+        Tablero t = new Tablero();        
+        t.crearTablero();                        
         
     }
     public void crearTablero() {            
@@ -42,12 +52,13 @@ public class Tablero {
             int cols = 700/columnas;        
             asignarIcono(baraja.consultaCarta(i), cols, fils);
             baraja.consultaCarta(i).setIcon(baraja.consultaCarta(i).getIconoTapado());                        
-            //baraja.consultaCarta(i).setPreferredSize(new Dimension(cols, fils)); 
+            baraja.consultaCarta(i).setPreferredSize(new Dimension(cols, fils));
             panel.add(baraja.consultaCarta(i));
         }        
         frame.setContentPane(panel);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setSize(700,700);
+        frame.setSize(700,700);                
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
     }
@@ -146,6 +157,31 @@ public class Tablero {
         if(puntajeTotal == (totalCartas/2)) {
             System.out.println("El juego ha terminado");
         }        
+    }
+    
+    public void menuPrincipal() {
+        JFrame frameMenu = new JFrame("Menú principal");
+        JPanel panelMenu = new JPanel();
+        JLabel titulo = new JLabel("MEMORAMA GAME"); 
+        JButton iniciar = new JButton("Iniciar juego");
+        panelMenu.setLayout(new BoxLayout(panelMenu,BoxLayout.Y_AXIS));
+        titulo.setAlignmentX(titulo.CENTER_ALIGNMENT);              
+        titulo.setFont(new Font("Calibri", Font.BOLD, 30));
+        titulo.setHorizontalAlignment(JLabel.CENTER);
+        titulo.setForeground(Color.decode("#253340"));
+        titulo.setBorder(new EmptyBorder(50, 10, 10, 10));
+        iniciar.setBackground(Color.white);
+        iniciar.setAlignmentX(iniciar.CENTER_ALIGNMENT);   
+                
+        panelMenu.setBackground(Color.decode("#949DA6"));
+        panelMenu.add(titulo);
+        panelMenu.add(iniciar);
+        frameMenu.setContentPane(panelMenu);
+        frameMenu.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frameMenu.setSize(600,400);        
+        frameMenu.setLocationRelativeTo(null);
+        frameMenu.setVisible(true);
+        
     }
                     
 }
