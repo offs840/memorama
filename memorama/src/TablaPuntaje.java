@@ -1,6 +1,8 @@
 
-
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  *
@@ -22,7 +24,18 @@ public class TablaPuntaje {
         }
     }
     
+    public void crearRegistro() {        
+        try {
+            FileWriter fw;
+            fw = new FileWriter(archivo, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(datos);
+            bw.close();
+        } catch (IOException ex) {
+            System.out.println("Ha ocurrido un error con el archivo");
+        }
 
+    }
 
     public void setDatos(String datos) {
         this.datos = datos;
